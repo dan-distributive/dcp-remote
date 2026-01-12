@@ -1,0 +1,48 @@
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon files
+Icon?
+._*
+
+# Thumbnails
+*.Thumbs.db
+
+# Files that might appear on external volumes
+.Spotlight-V100
+.Trashes
+
+# Python cache and compiled files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv/
+.env/
+
+# Logs
+*.log
+
+# Editor-specific
+*.swp
+*~
+.idea/
+.vscode/
+
+# Backup files
+*.bak
+*.tmp
+*.temp
+
+# Other system files
+*.DS_Store
+*.AppleDouble
+
