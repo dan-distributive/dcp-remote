@@ -10,12 +10,12 @@ from dcp import wallet # see wallet API: docs.dcp.dev/api/wallet/index.html)
 
 # Set an ID key: jobs will be owned and manageable with this key.
 # wallet.get(<name>) looks in ~/.dcp for <name>.keystore
+# Can also specify absolute path but must include the .keystore extension e.g. "/Users/dandesjardins/.dcp/default.keystore"
 id = wallet.get("id").js_ref
 dcp.identity.set(id)
 
 # Add a payment key: compute credits will be withdrawn from this account to pay for jobs.
-# You can use the keystore's basename as above, or specify an absolute path but must include the .keystore extension
-pay = wallet.get("/Users/dandesjardins/.dcp/default.keystore").js_ref
+pay = wallet.get("default").js_ref
 wallet.add(pay)
 
 # define and use URL from JS via pythonmonkey until available within DCP API
