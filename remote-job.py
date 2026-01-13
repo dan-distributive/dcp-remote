@@ -98,7 +98,7 @@ job = compute_for(signature_range, search_signatures, [n_signatures, min_sig_len
 
 # DCP job config
 job.modules = ['pandas', 'numpy', 'scikit-learn']
-job.computeGroups = [{'joinKey': 'ibm', 'joinSecret': 'dcp'}]
+job.computeGroups = [{'joinKey': 'demo', 'joinSecret': 'dcp'}]
 job.setResultStorage(f'{server_url}/dcp-results', {'elementType': 'results'}) # <<<<<< Bypasses Scheduler; workers send results directly to remote server
 
 # Publicly-viewable optional info
