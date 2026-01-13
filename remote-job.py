@@ -5,8 +5,10 @@ import json
 import pythonmonkey as pm
 import dcp
 dcp.init()
-from dcp.range_object import RangeObject # see docs.dcp.dev/api/compute/classes/range-object.html
 from dcp import wallet # see wallet API: docs.dcp.dev/api/wallet/index.html)
+from dcp import compute_for # see python compute API: github.com/Distributive-Network/bifrost2
+from dcp.range_object import RangeObject # see docs.dcp.dev/api/compute/classes/range-object.html
+
 
 # Set an ID key: jobs will be owned and manageable with this key.
 # wallet.get(<name>) looks in ~/.dcp for <name>.keystore
@@ -23,7 +25,7 @@ def URL(url):
     return pm.eval('(x) => new URL(x)')(url)
 
 # set URl for data server and results receiver
-server_url = 'http://192.168.6.49:5001'
+server_url = 'http://172.20.10.9:5001'
 
 # work function arguments
 n_signatures = 9
@@ -92,7 +94,7 @@ def search_signatures(i, n_signatures, min_sig_length, max_sig_length, seed, GSE
 
 
 # DCP job
-job = dcp.compute_for(signature_range, search_signatures, [n_signatures, min_sig_length, max_sig_length, seed, GSE57383_ps_psa])
+job = compute_for(signature_range, search_signatures, [n_signatures, min_sig_length, max_sig_length, seed, GSE57383_ps_psa])
 
 # DCP job config
 job.modules = ['pandas', 'numpy', 'scikit-learn']

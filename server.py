@@ -59,7 +59,7 @@ file_path = "data/GSE57383_ps_psa.txt"
 
 # File to store DCP results
 timestamp = datetime.now().strftime("%d%m%y_%H%M%S")  # e.g., 260112_212032
-results_file = f"GSE57383 PsA vs Ps {timestamp}.txt"
+results_path = f"results/GSE57383_PsA_vs_Ps_{timestamp}.txt"
 
 # ------------------------------------------------------------------------------
 # Fail fast on startup if required file is missing
