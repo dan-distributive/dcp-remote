@@ -54,7 +54,7 @@ server_url = 'http://122.148.6.59:5001'
 ```
 Also edit **line 99** to specify your compute group:
 ```
-job.computeGroups = [{'joinKey': '<key>', 'joinSecret': '<secret>'}]
+job.computeGroups = [{'attachKey': '<key>', 'attachSecret': '<secret>'}]
 ```
 
 **3. Configure Worker Allowed Origins**
